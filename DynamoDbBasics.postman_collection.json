@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "3f188fee-a22b-4a08-be00-3b2cfaab5d88",
+		"name": "DynamoDbBasics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14538189"
+	},
+	"item": [
+		{
+			"name": "SaveTemplate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"templateId\": \"\",\r\n    \"sector\": \"IT\",\r\n    \"templateName\": \"IT Document templete \",\r\n    \"templateDocuments\": [\r\n        {\r\n            \"documentId\": \"\",\r\n            \"documentName\": \"Degree Certificate\",\r\n            \"isMandatory\": true\r\n        },\r\n         {\r\n            \"documentId\": \"\",\r\n            \"documentName\": \"Cloud Certificattion\",\r\n            \"isMandatory\": false\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7029/api/templates",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7029",
+					"path": [
+						"api",
+						"templates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Template",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"templateId\": \"d2f4e1df-136f-4e9c-bcbc-f97eba2c7018\",\r\n    \"sector\": \"IT\",\r\n    \"templateName\": \"IT Document templete - A\",\r\n    \"templateDocuments\": [\r\n        {\r\n            \"documentId\": \"1d177e9d-4ea4-4210-93f8-1247ffac95c4\",\r\n            \"documentName\": \"Degree Certificate\",\r\n            \"isMandatory\": true\r\n        },\r\n        {\r\n            \"documentId\": \"6fe13a38-5688-4fb7-b7e2-abcb01a09d86\",\r\n            \"documentName\": \"Cloud Certificattion\",\r\n            \"isMandatory\": false\r\n        },\r\n        {\r\n            \"documentId\": \"9e53a512-eb8b-48f1-9d88-88dfa28289b4\",\r\n            \"documentName\": \"Post Graduation Certificate\",\r\n            \"isMandatory\": false\r\n        },\r\n        {\r\n            \"documentId\": \"\",\r\n            \"documentName\": \"Scrum Certificate\",\r\n            \"isMandatory\": false\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7029/api/templates",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7029",
+					"path": [
+						"api",
+						"templates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Templates",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7029/api/templates",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7029",
+					"path": [
+						"api",
+						"templates"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Templates",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7029/api/templates",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7029",
+							"path": [
+								"api",
+								"templates"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 May 2023 06:21:22 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"templateId\": \"9be3f345-b4b2-469d-b0e1-43c55ad8923e\",\n        \"templateName\": \"HR Document templete \",\n        \"sector\": \"HR\",\n        \"templateDocuments\": [\n            {\n                \"documentId\": \"ed1db8c5-dc1b-4d11-90f0-53b8b86af777\",\n                \"documentName\": \"Degree Certificate\",\n                \"isMandatory\": true\n            }\n        ]\n    },\n    {\n        \"templateId\": \"d2f4e1df-136f-4e9c-bcbc-f97eba2c7018\",\n        \"templateName\": \"IT Document templete \",\n        \"sector\": \"IT\",\n        \"templateDocuments\": [\n            {\n                \"documentId\": \"1d177e9d-4ea4-4210-93f8-1247ffac95c4\",\n                \"documentName\": \"Degree Certificate\",\n                \"isMandatory\": true\n            },\n            {\n                \"documentId\": \"6fe13a38-5688-4fb7-b7e2-abcb01a09d86\",\n                \"documentName\": \"Cloud Certificattion\",\n                \"isMandatory\": false\n            }\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Template By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7029/api/templates/d2f4e1df-136f-4e9c-bcbc-f97eba2c7018",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7029",
+					"path": [
+						"api",
+						"templates",
+						"d2f4e1df-136f-4e9c-bcbc-f97eba2c7018"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Template By ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7029/api/templates/d2f4e1df-136f-4e9c-bcbc-f97eba2c7018",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7029",
+							"path": [
+								"api",
+								"templates",
+								"d2f4e1df-136f-4e9c-bcbc-f97eba2c7018"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 May 2023 06:21:44 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"templateId\": \"d2f4e1df-136f-4e9c-bcbc-f97eba2c7018\",\n    \"templateName\": \"IT Document templete \",\n    \"sector\": \"IT\",\n    \"templateDocuments\": [\n        {\n            \"documentId\": \"1d177e9d-4ea4-4210-93f8-1247ffac95c4\",\n            \"documentName\": \"Degree Certificate\",\n            \"isMandatory\": true\n        },\n        {\n            \"documentId\": \"6fe13a38-5688-4fb7-b7e2-abcb01a09d86\",\n            \"documentName\": \"Cloud Certificattion\",\n            \"isMandatory\": false\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Template By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7029/api/templates/422fd60d-3649-4bff-9d8c-34d6e85d4d50",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7029",
+					"path": [
+						"api",
+						"templates",
+						"422fd60d-3649-4bff-9d8c-34d6e85d4d50"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Template By ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7029/api/templates/d2f4e1df-136f-4e9c-bcbc-f97eba2c7018",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7029",
+							"path": [
+								"api",
+								"templates",
+								"d2f4e1df-136f-4e9c-bcbc-f97eba2c7018"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 May 2023 06:21:44 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"templateId\": \"d2f4e1df-136f-4e9c-bcbc-f97eba2c7018\",\n    \"templateName\": \"IT Document templete \",\n    \"sector\": \"IT\",\n    \"templateDocuments\": [\n        {\n            \"documentId\": \"1d177e9d-4ea4-4210-93f8-1247ffac95c4\",\n            \"documentName\": \"Degree Certificate\",\n            \"isMandatory\": true\n        },\n        {\n            \"documentId\": \"6fe13a38-5688-4fb7-b7e2-abcb01a09d86\",\n            \"documentName\": \"Cloud Certificattion\",\n            \"isMandatory\": false\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Template By LOB",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7029/api/templates/sector/HR",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7029",
+					"path": [
+						"api",
+						"templates",
+						"sector",
+						"HR"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Template By LOB",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7029/api/templates/sector/HR",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7029",
+							"path": [
+								"api",
+								"templates",
+								"sector",
+								"HR"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 May 2023 06:23:02 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"templateId\": \"9be3f345-b4b2-469d-b0e1-43c55ad8923e\",\n        \"templateName\": \"HR Document templete \",\n        \"sector\": \"HR\",\n        \"templateDocuments\": [\n            {\n                \"documentId\": \"ed1db8c5-dc1b-4d11-90f0-53b8b86af777\",\n                \"documentName\": \"Degree Certificate\",\n                \"isMandatory\": true\n            }\n        ]\n    }\n]"
+				}
+			]
+		}
+	]
+}
